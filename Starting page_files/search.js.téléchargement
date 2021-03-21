@@ -1,0 +1,37 @@
+(function(){
+    window.onload = function(){
+        var height = window.innerHeight;
+        document.getElementById('search-content-wrapper').style.minHeight = height + 'px';
+        var footer = document.getElementById('fbar');
+        footer.classList.remove('is-hidden');
+        var logo = document.getElementById('header-link');
+        logo.classList.remove('is-hidden');
+    };
+
+    window.__gcse = {
+      callback: function () {
+        var trackSearch = function (q) {
+          if (q && q.length > 0) {
+            ga('send', 'event', 'internet-start', 'search used', q);
+          };
+        };
+        var trackSearchAction = function () {
+          trackSearch($('input.gsc-input').val());
+        };
+        var trackSearchCompletion = function (e) {
+          trackSearch($(e.target).text());
+        };
+        $('input.gsc-search-button').on('click', trackSearchAction);
+        $('input.gsc-input').keyup(function (e) {
+          if( e.keyCode === 13 || e.which === 13 ) {
+            trackSearchAction();
+          } else {
+            var el = $('table.gsc-completion-container').find('table');
+            el.off('click', trackSearchCompletion);
+            el.on('click', trackSearchCompletion);
+          };
+        });
+        trackSearchAction();
+      }
+    };
+})();

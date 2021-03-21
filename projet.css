@@ -1,0 +1,562 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	flex-direction: column;
+	width: auto;
+}
+/*tarnsfoem*/
+.box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 1000px;
+	height: 100px;
+}
+.box .face{
+	position: absolute;
+	width: 500px;
+	height: 150px;
+	font-size: 3em;
+	text-align: center;
+	line-height: 150px;
+	overflow: hidden;
+}
+.box .face span
+{
+	width: 100%;
+	height: 100%;
+	display: block;
+	transform: .5s;
+}
+.box .face.face1{
+	background: #efea14;
+	color: #fff;
+	transform-origin: left;
+	left: 0;
+	transform: perspective(800px) rotateY(-64.02deg);
+
+}
+.box .face.face2{
+	background: #efea14;
+	color: #fff;
+	transform-origin: right;
+	right: 0;
+	transform: perspective(800px) rotateY(64.02deg);
+
+}
+.box .face.face1 span{
+	position: absolute;
+	animation: animate1 5s linear infinite;
+}
+@keyframes animate1{
+	0%{
+		left: 200%;
+	}
+	100%{
+		left: -100%;
+	}
+}
+.box .face.face2 span{
+	position: absolute;
+	animation: animate2 5s linear infinite;
+}
+@keyframes animate2{
+	0%{
+		left: 100%;
+	}
+	100%{
+		left: -200%;
+	}
+}
+/*slider*/
+#slider{
+	overflow: hidden;
+}
+
+#slider figure img {
+     width: 20%;
+     float: left;
+}
+#slider figure{
+     width: 500%;
+     margin:0;
+     left: 0;
+     animation: 10s slider infinite;
+     position: relative;
+}
+
+@keyframes slider{
+	0%{
+		left: 0;
+	}
+	20%{
+		left: 0;
+	}
+	25%{
+		left: -100%;
+	}
+	45%{
+		left: -100%;
+	}
+	50%{
+		left: -200%;
+	}
+	70%{
+		left: -200%;
+	}
+	75%{
+		left: -300%;
+	}
+	95%{
+		left: -300%;
+	}
+	100%{
+		left: -400%;
+	}
+}
+
+
+
+/*_____menu____*/
+.navbar{
+	width: 	100%;
+	background-color:#01a9f7;
+    padding: 25px 0px;
+	margin-bottom: 5px;
+	padding-top: 40px
+}
+.navbar .max-width{
+	width: 1300px;
+
+}
+
+.menu{
+	padding-top: 10px;
+}
+.menu li{
+	display:inline-block;	
+	text-align: center;
+	cursor: pointer;
+}
+.menu li a{
+
+	color: white;
+	font-size: 20px;
+	font-weight: 200;
+	margin-left: 25px;
+	transition: color 1s;
+	text-decoration: none;
+
+}
+.menu li a:hover{
+	color: yellow;
+}
+.active{
+	display: inline-block;
+	font-size: 30px;
+	font-weight: 200;
+	background-color: #efea14;
+	color: white;
+	border:2px solid #efea14;
+	border-radius: 20px;
+	text-decoration: none;
+	border-radius: 20px;
+	margin-right: 50%;
+	padding-bottom: 10px;
+
+
+}
+.active:hover
+{
+	color:blue;
+}
+
+/*section*/
+.search-box{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,50%);
+	background: #2f3640;
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+}
+.search-box:hover > .search-txt{
+	width: 240px;
+	padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+	background: white;
+}
+.search-btn{
+	color:#e84118;
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #efea14;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+}
+.search-txt{
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
+}
+.titre{
+	color: blue;
+	animation: 5s linear infinite;
+	transition: 0.4s;
+}
+/*section 1*/
+.home{
+	width: 100%;
+	display: flex;
+	padding-top: 140px;
+	background:url('DUBAI.jpg');
+}
+.child-left{
+	width: 25%;
+	background-color:none;
+	height: 500px;
+	margin: 0px 10px;
+	padding: 25px;
+}
+
+.child-center{
+	width: auto;
+	background-color:none;
+	height:800px auto;
+	display: flex;
+	padding: 10px;
+}
+.child-right{
+	width: 25%;
+	background-color:none;
+	height:500px;
+	margin: 0px 10px;
+}
+
+.info1{
+	height: 100%;
+	width: 50%;
+	background-color: white;
+}
+.info2{
+	margin-left: 10px;
+	width: 50%;
+	background-color: none;
+	padding: 10px;
+}
+.info21{
+	margin-bottom: 5px;
+	width: 100%;
+	height: 30% ;
+	background-color: none;
+
+}
+
+ .colone{
+ 	position: relative;
+ 	float: left;
+ 	width: 30%;
+ 	min-height: 200px;
+ 	text-align: center;
+ 	margin: 10px;
+ 	padding: 5px;
+ }
+.image{
+	opacity: 1;
+	display: block;
+	width: 350px ;
+	transition: .05s ease;
+	backface-visibility: hidden;
+	height: 200px;
+}
+.middle{
+	transition: .05s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.text{
+	position: relative;
+	background:white;
+	color: blue;
+	font-size: 16px;
+	padding: 16px 32px;
+	cursor: pointer;
+}
+.colone:hover .image{
+	opacity: 0.3;
+}
+.colone:hover .middle{
+	opacity: 1;
+}
+.child-left img{
+	border-radius: 20px;
+	box-shadow: 20px 10px 10px  white; 
+
+	
+}
+/*.....section3....*/
+.terre{
+	background:url('DUBAI.jpg');
+}
+/*.imagee{
+	
+}
+/*.imagee img{
+	margin-left: 40%;
+	margin-top: 10px;
+	border-radius: 20px;
+	box-shadow: 20px 10px 10px  white; 
+	position: absolute;
+}*/
+.article h1{
+	color: yellow;
+	font-size: 40px
+}
+.article p{
+	font-weight: 500;
+	font-size: 35px;
+	font-family: aria;
+	color: blue;
+}
+
+.decou{
+	background: url('DUBAI.jpg');
+}
+.decou h1{
+	color: yellow;
+}
+#gh{
+	width: 80%;
+	border-radius: 20px;
+	box-shadow: 10px 10px 10px 10px  white; 
+}
+section{
+	background:url('DUBAI.jpg');
+	 justify-content: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	padding-top: 40px;
+	width: 100%;
+
+}
+.btn{
+	margin-top: 600px;
+	margin-right:20px;
+	width: 200px;
+	padding: 5px 5px 5px;
+	border-radius: 20px;
+	font-family: bold;
+	font-size: 20px;
+	box-shadow: 10px 5px 5px  #efea14; 
+}
+.btn:hover{
+	background: yellow;
+}
+form{
+	background-color: #efea14;
+	border-radius: 10px;
+	box-shadow: 20px 10px 10px  white ; 
+}
+.afriq{
+	width: 100%;
+	display: flex;
+	padding-top: 100px;
+	background:url('DUBAI.jpg');
+}
+
+.info188{
+	height: 100%;
+	width: 50%;
+	background-color: white;
+}
+#sliderr{
+	overflow: hidden;
+}
+
+#sliderr figure img {
+     width: 20%;
+     float: left;
+     height: 400px;
+}
+#sliderr figure{
+     width: 500%;
+     margin:0;
+     left: 0;
+     animation: 10s slider infinite;
+     position: relative;
+}
+
+@keyframes sliderr{
+	0%{
+		left: 0;
+	}
+	20%{
+		left: 0;
+	}
+	25%{
+		left: -100%;
+	}
+	45%{
+		left: -100%;
+	}
+	50%{
+		left: -200%;
+	}
+	70%{
+		left: -200%;
+	}
+	75%{
+		left: -300%;
+	}
+	95%{
+		left: -300%;
+	}
+	100%{
+		left: -400%;
+	}
+}
+.afriq-right{
+	width: 80%;
+	background-color:none;
+	height:400px;
+	margin: 0px 10px;
+}
+.af-left{
+	width: 25%;
+	background-color:none;
+	height: 500px;
+	margin: 0px 10px;
+	padding: 25px;
+}
+.sec .sec-content img{
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	border: 2px solid;
+	margin-top: 30px;
+	position: relative;
+
+}
+.sec .sec-content table{
+	height: 300px;
+	
+}
+.sec .sec-content th{
+	width: 33%;
+	background-color: #efea14; 
+ 
+}
+.sec .tit{
+	font-size: 30px;
+	font-weight: 200;
+	text-align: center;
+	font-family: arial black;
+}
+.sec .titt{
+	font-size: 30px;
+	font-weight: 200;
+	text-align: center;
+	font-family: arial black;
+}
+.sec .title3{
+	margin-top: 5px;
+	font-size: 30px;
+	font-weight: 200;
+	text-align: center;
+	color:  #efea14;
+	font-family: arial black;
+}
+
+footer{
+	flex-shrink: 0;
+	border-top: 1px dashed #000 ;
+	width:auto;
+	background: #01a9f7;
+	color: #333;
+}
+.contenu-footer{
+	width: auto;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	font-size: 20px;
+	padding: 50px 0 100px;
+
+}
+.contenu-footer h3{
+	color: white;
+}
+.bloc-footer-services{
+	margin-right: 10%;
+}
+.bloc-footer-medias{
+	margin-left: 2%;
+}
+.bloc-footer-horaires{
+	margin-left: 1%;
+}
+.bloc-footer-horaires{
+	margin-left: 1%;
+}
+.footer-contact p{
+	padding: 2px ;
+}
+.list-services,
+.list-horaires,
+.list-media{
+	list-style-type: none;
+}
+.list-services li {
+	padding: 2px 0;
+}
+.list-services a{
+	text-decoration: none;
+	color: yellow;
+
+}
+.list-services a:hover{
+	color: blue;
+}
+.list-media a{
+	text-decoration: none;
+	color: yellow;
+}
+.list-media a:hover{
+	color: blue;
+}
+.af-left img{
+	width: 300px;
+
+}
+.list-horaires{
+	color: yellow;
+}
+.list-horaires a:hover{
+	color: blue;
+}
+.list-adresse li{
+	text-decoration: none;
+	color: yellow;
+
+}
